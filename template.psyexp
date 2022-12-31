@@ -1,0 +1,256 @@
+﻿<?xml version="1.0" ?>
+<PsychoPy2experiment encoding="utf-8" version="2022.2.4">
+  <Settings>
+    <Param val="2" valType="str" updates="None" name="Audio latency priority"/>
+    <Param val="ptb" valType="str" updates="None" name="Audio lib"/>
+    <Param val="" valType="str" updates="None" name="Completed URL"/>
+    <Param val="auto" valType="str" updates="None" name="Data file delimiter"/>
+    <Param val="u'results/%s_%s_%s' % (expInfo['participant'], expName, expInfo['date'])" valType="code" updates="None" name="Data filename"/>
+    <Param val="False" valType="bool" updates="None" name="Enable Escape"/>
+    <Param val="{'participant': 'f&quot;{randint(0, 999999):06.0f}&quot;'}" valType="code" updates="None" name="Experiment info"/>
+    <Param val="True" valType="bool" updates="None" name="Force stereo"/>
+    <Param val="True" valType="bool" updates="None" name="Full-screen window"/>
+    <Param val="" valType="str" updates="None" name="HTML path"/>
+    <Param val="" valType="str" updates="None" name="Incomplete URL"/>
+    <Param val="testMonitor" valType="str" updates="None" name="Monitor"/>
+    <Param val="[]" valType="list" updates="None" name="Resources"/>
+    <Param val="False" valType="bool" updates="None" name="Save csv file"/>
+    <Param val="False" valType="bool" updates="None" name="Save excel file"/>
+    <Param val="False" valType="bool" updates="None" name="Save hdf5 file"/>
+    <Param val="True" valType="bool" updates="None" name="Save log file"/>
+    <Param val="True" valType="bool" updates="None" name="Save psydat file"/>
+    <Param val="True" valType="bool" updates="None" name="Save wide csv file"/>
+    <Param val="1" valType="num" updates="None" name="Screen"/>
+    <Param val="False" valType="bool" updates="None" name="Show info dlg"/>
+    <Param val="False" valType="bool" updates="None" name="Show mouse"/>
+    <Param val="height" valType="str" updates="None" name="Units"/>
+    <Param val="2022.2.4" valType="str" updates="None" name="Use version"/>
+    <Param val="[2560, 1440]" valType="list" updates="None" name="Window size (pixels)"/>
+    <Param val="avg" valType="str" updates="None" name="blendMode"/>
+    <Param val="$[0,0,0]" valType="color" updates="None" name="color"/>
+    <Param val="rgb" valType="str" updates="None" name="colorSpace"/>
+    <Param val="100.1.1.1" valType="str" updates="None" name="elAddress"/>
+    <Param val="FILTER_LEVEL_2" valType="str" updates="None" name="elDataFiltering"/>
+    <Param val="FILTER_LEVEL_OFF" valType="str" updates="None" name="elLiveFiltering"/>
+    <Param val="EYELINK 1000 DESKTOP" valType="str" updates="None" name="elModel"/>
+    <Param val="ELLIPSE_FIT" valType="str" updates="None" name="elPupilAlgorithm"/>
+    <Param val="PUPIL_AREA" valType="str" updates="None" name="elPupilMeasure"/>
+    <Param val="1000" valType="num" updates="None" name="elSampleRate"/>
+    <Param val="False" valType="bool" updates="None" name="elSimMode"/>
+    <Param val="RIGHT_EYE" valType="str" updates="None" name="elTrackEyes"/>
+    <Param val="PUPIL_CR_TRACKING" valType="str" updates="None" name="elTrackingMode"/>
+    <Param val="template" valType="str" updates="None" name="expName"/>
+    <Param val="on Sync" valType="str" updates="None" name="exportHTML"/>
+    <Param val="None" valType="str" updates="None" name="eyetracker"/>
+    <Param val="127.0.0.1" valType="str" updates="None" name="gpAddress"/>
+    <Param val="4242" valType="num" updates="None" name="gpPort"/>
+    <Param val="ioHub" valType="str" updates="None" name="keyboardBackend"/>
+    <Param val="exp" valType="code" updates="None" name="logging level"/>
+    <Param val="('MIDDLE_BUTTON',)" valType="list" updates="None" name="mgBlink"/>
+    <Param val="CONTINUOUS" valType="str" updates="None" name="mgMove"/>
+    <Param val="0.5" valType="num" updates="None" name="mgSaccade"/>
+    <Param val="0.6" valType="num" updates="None" name="plConfidenceThreshold"/>
+    <Param val="True" valType="bool" updates="None" name="plPupilCaptureRecordingEnabled"/>
+    <Param val="" valType="str" updates="None" name="plPupilCaptureRecordingLocation"/>
+    <Param val="127.0.0.1" valType="str" updates="None" name="plPupilRemoteAddress"/>
+    <Param val="50020" valType="num" updates="None" name="plPupilRemotePort"/>
+    <Param val="1000" valType="num" updates="None" name="plPupilRemoteTimeoutMs"/>
+    <Param val="False" valType="bool" updates="None" name="plPupillometryOnly"/>
+    <Param val="psychopy_iohub_surface" valType="str" updates="None" name="plSurfaceName"/>
+    <Param val="" valType="str" updates="None" name="tbLicenseFile"/>
+    <Param val="" valType="str" updates="None" name="tbModel"/>
+    <Param val="60" valType="num" updates="None" name="tbSampleRate"/>
+    <Param val="" valType="str" updates="None" name="tbSerialNo"/>
+  </Settings>
+  <Routines>
+    <Routine name="trial">
+      <CodeComponent name="el_ControlScript">
+        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="############################&amp;#10;# Eyelink recording starts&amp;#10;############################&amp;#10;if (not dummy_mode):&amp;#10;    try:&amp;#10;        el_tracker.startRecording(1, 1, 1, 1)&amp;#10;        # send a &quot;TRIALID&quot; message to mark the start of a trial, see Data&amp;#10;        # Viewer User Manual, &quot;Protocol for EyeLink Data to Viewer Integration&quot;&amp;#10;        el_tracker.sendMessage('BLOCK_ID %d, TRIAL_ID %d' % ((blockLoop.thisN + 1), (trialLoop.thisN + 1)))&amp;#10;&amp;#10;        # record_status_message : show some info on the Host PC&amp;#10;        # here we show how many trial has been tested&amp;#10;        status_msg = 'BLOCK_ID %d, TRIALID %d' % ((blockLoop.thisN + 1), (trialLoop.thisN + 1))&amp;#10;        el_tracker.sendCommand(&quot;record_status_message '%s'&quot; % status_msg)&amp;#10;        &amp;#10;    except RuntimeError as error:&amp;#10;        print(&quot;ERROR:&quot;, error)&amp;#10;        abort_trial()&amp;#10;        # return pylink.TRIAL_ERROR&amp;#10;&amp;#10;    # Allocate some time for the tracker to cache some samples&amp;#10;    pylink.pumpDelay(100)&amp;#10;&amp;#10;    # clear the Data Viewer screen as well&amp;#10;    bgcolor_RGB = (140, 140, 140)&amp;#10;    el_tracker.sendMessage('!V CLEAR %d %d %d' % bgcolor_RGB)" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="Py" valType="str" updates="None" name="Code Type"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="############################&amp;#10;# Eyelink recording stops&amp;#10;############################&amp;#10;&amp;#10;if (not dummy_mode):&amp;#10;    # clear the screen&amp;#10;    clear_screen(win, genv)&amp;#10;&amp;#10;    # send a message to clear the Data Viewer screen as well&amp;#10;    el_tracker.sendMessage('!V CLEAR %d %d %d' % bgcolor_RGB)&amp;#10;&amp;#10;    # close the VCL file that contain the VFRAME messages&amp;#10;    # dlf_file.close()&amp;#10;&amp;#10;    # stop recording; add 100 msec to catch final events before stopping&amp;#10;    pylink.pumpDelay(100)&amp;#10;    el_tracker.stopRecording()" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="el_ControlScript" valType="code" updates="None" name="name"/>
+      </CodeComponent>
+      <CodeComponent name="el_SendMarkersScript">
+        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="# eye tracker markers&amp;#10;sendMarker = True" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="Py" valType="str" updates="None" name="Code Type"/>
+        <Param val="# send a mark to eye tracker to mark the start of stimuli onset&amp;#10;# the following is an example for the onset of the image component&amp;#10;# here, 'image' is the name of the Component in this Routine.&amp;#10;if sendMarker and image.status == STARTED and (not dummy_mode):&amp;#10;    sendMarker = False&amp;#10;    el_tracker.sendMessage('image_starts')&amp;#10;&amp;#10;# the following is an example for the offset of the image tool.&amp;#10;# this might not always work as image offset might overlap with trial offset.&amp;#10;if sendMarker == False and image.status == FINISHED and (not dummy_mode):&amp;#10;    el_tracker.sendMessage('image_ends')&amp;#10;    sendMarker = True" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="el_SendMarkersScript" valType="code" updates="None" name="name"/>
+      </CodeComponent>
+      <ImageComponent name="image">
+        <Param val="center" valType="str" updates="constant" name="anchor"/>
+        <Param val="$[1,1,1]" valType="color" updates="constant" name="color"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="bool" updates="constant" name="flipHoriz"/>
+        <Param val="False" valType="bool" updates="constant" name="flipVert"/>
+        <Param val="images/AM28H.png" valType="file" updates="constant" name="image"/>
+        <Param val="linear" valType="str" updates="constant" name="interpolate"/>
+        <Param val="" valType="str" updates="constant" name="mask"/>
+        <Param val="image" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="(0, 0)" valType="list" updates="constant" name="pos"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="(0.5, 0.5)" valType="list" updates="constant" name="size"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="1.0" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="128" valType="num" updates="constant" name="texture resolution"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+      </ImageComponent>
+      <CodeComponent name="el_LandmarkScript">
+        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="# this script is to draw landmarks on the Host PC&amp;#10;&amp;#10;if (not dummy_mode):&amp;#10;    # convert the size of image tool into pixels&amp;#10;    imageLocation = obj2pix(image, win)&amp;#10;    &amp;#10;    # Drawing reference landmarks in the data file.&amp;#10;    el_tracker.sendCommand('draw_box %d %d %d %d 15' % imageLocation)&amp;#10;    &amp;#10;    # Drawing reference landmarks on the Host PC screen - Optional&amp;#10;    # See COMMANDS.INI in the Host PC's exe folder for a list of commands&amp;#10;    # region occupied by the movie&amp;#10;    el_tracker.sendMessage('!V DRAWBOX 0 255 0 %d %d %d %d' % imageLocation)" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="Py" valType="str" updates="None" name="Code Type"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="el_LandmarkScript" valType="code" updates="None" name="name"/>
+      </CodeComponent>
+    </Routine>
+    <Routine name="introduction"/>
+    <Routine name="el_Setup">
+      <CodeComponent name="setupScript">
+        <Param val="# load libraries&amp;#10;from EyeLinkCoreGraphicsPsychoPy import EyeLinkCoreGraphicsPsychoPy&amp;#10;import pylink&amp;#10;&amp;#10;from EyelinkHelperFunctions import *&amp;#10;from EyelinkSetup import *&amp;#10;&amp;#10;from string import ascii_letters, digits&amp;#10;import string&amp;#10;import time&amp;#10;import random&amp;#10;&amp;#10;import psychtoolbox as ptb&amp;#10;&amp;#10;# set a short name for your study. This name will be the first few letters of the data file.&amp;#10;studyAbbr = '' # max 3 characters" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="# --- Show participant info dialog --&amp;#10;expInfo['participant'] = studyAbbr + '_' + ''.join(random.choices(string.ascii_uppercase + string.ascii_lowercase +  string.digits, k = 4))&amp;#10;&amp;#10;# loop until we get a valid filename&amp;#10;while True:&amp;#10;    dlg = gui.DlgFromDict(dictionary=expInfo, sortKeys=False, title=expName)&amp;#10;    # show dialog and wait for OK or Cancel&amp;#10;    if dlg.OK:  # if ok_data is not None&amp;#10;        print('EDF data filename: {}'.format(dlg.data[0]))&amp;#10;    else:&amp;#10;        print('user cancelled')&amp;#10;        core.quit()&amp;#10;        sys.exit()&amp;#10;    # get the string entered by the experimenter&amp;#10;    tmp_str = dlg.data[0]&amp;#10;    # strip trailing characters, ignore the &quot;.edf&quot; extension&amp;#10;    edf_fname = tmp_str.rstrip().split('.')[0]&amp;#10;    # check if the filename is valid (length &lt;= 8 &amp; no special char)&amp;#10;    allowed_char = ascii_letters + digits + '_'&amp;#10;    if not all([c in allowed_char for c in edf_fname]):&amp;#10;        print('ERROR: Invalid EDF filename')&amp;#10;    elif len(edf_fname) &gt; 8:&amp;#10;        print('ERROR: EDF filename should not exceed 8 characters')&amp;#10;    else:&amp;#10;        break&amp;#10;#&amp;#10;#expInfo['date'] = data.getDateStr()  # add a simple timestamp&amp;#10;#expInfo['expName'] = expName&amp;#10;#expInfo['psychopyVersion'] = psychopyVersion&amp;#10;&amp;#10;# Set up a folder to store the EDF data files and the associated resources&amp;#10;# e.g., files defining the interest areas used in each trial&amp;#10;results_folder = 'results'&amp;#10;if not os.path.exists(results_folder):&amp;#10;    os.makedirs(results_folder)&amp;#10;&amp;#10;# We download EDF data file from the EyeLink Host PC to the local hard&amp;#10;# drive at the end of each testing session, here we rename the EDF to&amp;#10;# include session start date/time&amp;#10;time_str = time.strftime(&quot;_%Y_%m_%d_%H_%M&quot;, time.localtime())&amp;#10;session_identifier = edf_fname + time_str&amp;#10;&amp;#10;# Data file name stem = absolute path + name; later add .psyexp, .csv, .log, etc&amp;#10;filename = _thisDir + os.sep + \&amp;#10;    u'results/%s' % (session_identifier)&amp;#10;&amp;#10;# create a folder for the current testing session in the &quot;results&quot; folder&amp;#10;session_folder = os.path.join(results_folder, session_identifier)&amp;#10;if not os.path.exists(session_folder):&amp;#10;    os.makedirs(session_folder)&amp;#10;&amp;#10;# create a 'graphics' folder to save the VFRAME commands for each trial&amp;#10;#graphics_folder = os.path.join(session_folder, 'graphics')&amp;#10;#if not os.path.exists(graphics_folder):&amp;#10;#    os.makedirs(graphics_folder)&amp;#10;&amp;#10;# get the native screen resolution used by PsychoPy&amp;#10;scn_width, scn_height = win.size&amp;#10;&amp;#10;########################&amp;#10;### Eyelink initialization starts###&amp;#10;########################&amp;#10;&amp;#10;dummy_mode = False&amp;#10;if (not dummy_mode):&amp;#10;    el_tracker = elSetupStep1(dummy_mode)&amp;#10;    el_tracker = elSetupStep2(el_tracker, edf_fname)&amp;#10;    el_tracker = elSetupStep3(el_tracker, dummy_mode)&amp;#10;    el_tracker, genv = elSetupStep4(el_tracker, win)&amp;#10;&amp;#10;########################&amp;#10;### Eyelink initialization ends###&amp;#10;########################&amp;#10;" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="Py" valType="str" updates="None" name="Code Type"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="# Step 7: disconnect, download the EDF file, then terminate the task&amp;#10;edf_file = edf_fname + &quot;.EDF&quot;&amp;#10;terminate_task(win, session_folder, session_identifier, edf_file, genv)" valType="extendedCode" updates="constant" name="End Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="setupScript" valType="code" updates="None" name="name"/>
+      </CodeComponent>
+    </Routine>
+    <Routine name="el_Calibration">
+      <CodeComponent name="calibrationScript">
+        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="########################&amp;#10;### Eyelink setup starts###&amp;#10;########################&amp;#10;if (not dummy_mode):&amp;#10;    el_tracker = elSetupStep5(el_tracker, dummy_mode)&amp;#10;&amp;#10;driftRequested = False&amp;#10;&amp;#10;########################&amp;#10;### Eyelink setup ends###&amp;#10;########################" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="Py" valType="str" updates="None" name="Code Type"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="win.flip()" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="calibrationScript" valType="code" updates="None" name="name"/>
+      </CodeComponent>
+    </Routine>
+    <Routine name="el_DriftCorrection">
+      <CodeComponent name="driftCorrectionScript">
+        <Param val="# setup a variable to control whether to do driftcorrection at the beginning of each tiral.&amp;#10;driftRequested = False" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="while (not dummy_mode) and driftRequested :&amp;#10;    # terminate the task if no longer connected to the tracker or&amp;#10;    # user pressed Ctrl-C to terminate the task&amp;#10;    if (not el_tracker.isConnected()) or el_tracker.breakPressed():&amp;#10;        terminate_task()&amp;#10;        # return pylink.ABORT_EXPT&amp;#10;&amp;#10;    # drift-check and re-do camera setup if ESCAPE is pressed&amp;#10;    try:&amp;#10;        # in the following line, int(scn_width / 2), int(scn_height / 2) mean the target will show up at the center of the screen.&amp;#10;        # you can set the target location to other values (in pixels).&amp;#10;        error = el_tracker.doDriftCorrect(int(scn_width / 2), int(scn_height / 2), 1, 1)&amp;#10;        # break following a success drift-check&amp;#10;        if error is not pylink.ESC_KEY:&amp;#10;#            driftRequested = False&amp;#10;            continueRoutine = False  # skip attention getter for this trial.&amp;#10;            break&amp;#10;    except:&amp;#10;        pass&amp;#10; " valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="Py" valType="str" updates="None" name="Code Type"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
+        <Param val="scn_height / 2" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="driftRequested = False" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="driftCorrectionScript" valType="code" updates="None" name="name"/>
+      </CodeComponent>
+    </Routine>
+    <Routine name="el_SaveData">
+      <CodeComponent name="saveDataScript">
+        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="# save data to the eye tracking file&amp;#10;&amp;#10;# record trial variables to the EDF data file, for details, see Data&amp;#10;# Viewer User Manual, &quot;Protocol for EyeLink Data to Viewer Integration&quot;&amp;#10;&amp;#10;# as an example, the following line will create a variable of phase and assign 'test' as its value&amp;#10;if (not dummy_mode):&amp;#10;    el_tracker.sendMessage('!V TRIAL_VAR phase %s' % 'test')&amp;#10;&amp;#10;# another example, the following line will create a variable of trialNum and assign trialLoop.thisN + 1 as its value&amp;#10;if (not dummy_mode):&amp;#10;    el_tracker.sendMessage('!V TRIAL_VAR trialNum %s' % (trialLoop.thisN + 1))" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="Py" valType="str" updates="None" name="Code Type"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="saveDataScript" valType="code" updates="None" name="name"/>
+      </CodeComponent>
+    </Routine>
+  </Routines>
+  <Flow>
+    <Routine name="el_Setup"/>
+    <Routine name="introduction"/>
+    <Routine name="el_Calibration"/>
+    <LoopInitiator loopType="TrialHandler" name="blockLoop">
+      <Param name="Selected rows" updates="None" val="" valType="str"/>
+      <Param name="conditions" updates="None" val="None" valType="str"/>
+      <Param name="conditionsFile" updates="None" val="" valType="file"/>
+      <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
+      <Param name="isTrials" updates="None" val="True" valType="bool"/>
+      <Param name="loopType" updates="None" val="random" valType="str"/>
+      <Param name="nReps" updates="None" val="5" valType="num"/>
+      <Param name="name" updates="None" val="blockLoop" valType="code"/>
+      <Param name="random seed" updates="None" val="" valType="code"/>
+    </LoopInitiator>
+    <LoopInitiator loopType="TrialHandler" name="trialLoop">
+      <Param name="Selected rows" updates="None" val="" valType="str"/>
+      <Param name="conditions" updates="None" val="None" valType="str"/>
+      <Param name="conditionsFile" updates="None" val="" valType="file"/>
+      <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
+      <Param name="isTrials" updates="None" val="True" valType="bool"/>
+      <Param name="loopType" updates="None" val="random" valType="str"/>
+      <Param name="nReps" updates="None" val="5" valType="num"/>
+      <Param name="name" updates="None" val="trialLoop" valType="code"/>
+      <Param name="random seed" updates="None" val="" valType="code"/>
+    </LoopInitiator>
+    <Routine name="el_DriftCorrection"/>
+    <Routine name="trial"/>
+    <Routine name="el_SaveData"/>
+    <LoopTerminator name="trialLoop"/>
+    <LoopTerminator name="blockLoop"/>
+  </Flow>
+</PsychoPy2experiment>
