@@ -1,8 +1,8 @@
 ﻿#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
-This experiment was created using PsychoPy3 Experiment Builder (v2022.2.4),
-    on Wed Dec  7 21:05:56 2022
+This experiment was created using PsychoPy3 Experiment Builder (v2022.2.5),
+    on January 04, 2023, at 16:51
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -10,10 +10,6 @@ If you publish work using this script the most relevant publication is:
         https://doi.org/10.3758/s13428-018-01193-y
 
 """
-
-import psychopy
-psychopy.useVersion('2022.2.4')
-
 
 # --- Import packages ---
 from psychopy import locale_setup
@@ -60,7 +56,7 @@ driftRequested = False
 _thisDir = os.path.dirname(os.path.abspath(__file__))
 os.chdir(_thisDir)
 # Store info about the experiment session
-psychopyVersion = '2022.2.4'
+psychopyVersion = '2022.2.5'
 expName = 'template'  # from the Builder filename that created this script
 expInfo = {
     'participant': f"{randint(0, 999999):06.0f}",
@@ -75,7 +71,7 @@ filename = _thisDir + os.sep + u'results/%s_%s_%s' % (expInfo['participant'], ex
 # An ExperimentHandler isn't essential but helps with data saving
 thisExp = data.ExperimentHandler(name=expName, version='',
     extraInfo=expInfo, runtimeInfo=None,
-    originPath='/Users/naiqixiao/Desktop/template_EL/template.py',
+    originPath='C:\\Users\\babylab-eyetracker\\Documents\\Psychopy_examples\\PsychoPy_EyeLink_Templates\\template.py',
     savePickle=True, saveWideText=True,
     dataFileName=filename)
 # save a log file for detail verbose info
@@ -87,7 +83,7 @@ frameTolerance = 0.001  # how close to onset before 'same' frame
 
 # --- Setup the Window ---
 win = visual.Window(
-    size=[2560, 1440], fullscr=True, screen=0, 
+    size=[1707, 1920], fullscr=True, screen=0, 
     winType='pyglet', allowStencil=False,
     monitor='testMonitor', color=[0,0,0], colorSpace='rgb',
     blendMode='avg', useFBO=True, 
@@ -206,8 +202,6 @@ image = visual.ImageStim(
     color=[1,1,1], colorSpace='rgb', opacity=None,
     flipHoriz=False, flipVert=False,
     texRes=128.0, interpolate=True, depth=-2.0)
-
-# --- Initialize components for Routine "el_SaveData" ---
 
 # Create some handy timers
 globalClock = core.Clock()  # to track the time since experiment started
@@ -608,6 +602,16 @@ for thisBlockLoop in blockLoop:
         ############################
         
         if (not dummy_mode):
+            el_tracker.sendMessage('trial_ends')
+            # save data to the eye tracking file
+        
+            # record trial variables to the EDF data file, for details, see Data
+            # Viewer User Manual, "Protocol for EyeLink Data to Viewer Integration"
+            # as an example, the following line will create a variable of phase and assign 'test' as its value
+            el_tracker.sendMessage('!V TRIAL_VAR phase %s' % 'test')
+            # another example, the following line will create a variable of trialNum and assign trialLoop.thisN + 1 as its value
+            el_tracker.sendMessage('!V TRIAL_VAR trialNum %s' % (trialLoop.thisN + 1))
+            
             # clear the screen
             clear_screen(win, genv)
         
@@ -625,67 +629,6 @@ for thisBlockLoop in blockLoop:
             routineTimer.reset()
         else:
             routineTimer.addTime(-1.000000)
-        
-        # --- Prepare to start Routine "el_SaveData" ---
-        continueRoutine = True
-        routineForceEnded = False
-        # update component parameters for each repeat
-        # Run 'Begin Routine' code from saveDataScript
-        # save data to the eye tracking file
-        
-        # record trial variables to the EDF data file, for details, see Data
-        # Viewer User Manual, "Protocol for EyeLink Data to Viewer Integration"
-        
-        # as an example, the following line will create a variable of phase and assign 'test' as its value
-        if (not dummy_mode):
-            el_tracker.sendMessage('!V TRIAL_VAR phase %s' % 'test')
-        
-        # another example, the following line will create a variable of trialNum and assign trialLoop.thisN + 1 as its value
-        if (not dummy_mode):
-            el_tracker.sendMessage('!V TRIAL_VAR trialNum %s' % (trialLoop.thisN + 1))
-        # keep track of which components have finished
-        el_SaveDataComponents = []
-        for thisComponent in el_SaveDataComponents:
-            thisComponent.tStart = None
-            thisComponent.tStop = None
-            thisComponent.tStartRefresh = None
-            thisComponent.tStopRefresh = None
-            if hasattr(thisComponent, 'status'):
-                thisComponent.status = NOT_STARTED
-        # reset timers
-        t = 0
-        _timeToFirstFrame = win.getFutureFlipTime(clock="now")
-        frameN = -1
-        
-        # --- Run Routine "el_SaveData" ---
-        while continueRoutine:
-            # get current time
-            t = routineTimer.getTime()
-            tThisFlip = win.getFutureFlipTime(clock=routineTimer)
-            tThisFlipGlobal = win.getFutureFlipTime(clock=None)
-            frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
-            # update/draw components on each frame
-            
-            # check if all components have finished
-            if not continueRoutine:  # a component has requested a forced-end of Routine
-                routineForceEnded = True
-                break
-            continueRoutine = False  # will revert to True if at least one component still running
-            for thisComponent in el_SaveDataComponents:
-                if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
-                    continueRoutine = True
-                    break  # at least one component has not yet finished
-            
-            # refresh the screen
-            if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
-                win.flip()
-        
-        # --- Ending Routine "el_SaveData" ---
-        for thisComponent in el_SaveDataComponents:
-            if hasattr(thisComponent, "setAutoDraw"):
-                thisComponent.setAutoDraw(False)
-        # the Routine "el_SaveData" was not non-slip safe, so reset the non-slip timer
-        routineTimer.reset()
         thisExp.nextEntry()
         
     # completed 5.0 repeats of 'trialLoop'

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" ?>
-<PsychoPy2experiment encoding="utf-8" version="2022.2.4">
+<PsychoPy2experiment encoding="utf-8" version="2022.2.5">
   <Settings>
     <Param val="2" valType="str" updates="None" name="Audio latency priority"/>
     <Param val="ptb" valType="str" updates="None" name="Audio lib"/>
@@ -24,8 +24,8 @@
     <Param val="False" valType="bool" updates="None" name="Show info dlg"/>
     <Param val="False" valType="bool" updates="None" name="Show mouse"/>
     <Param val="height" valType="str" updates="None" name="Units"/>
-    <Param val="2022.2.4" valType="str" updates="None" name="Use version"/>
-    <Param val="[2560, 1440]" valType="list" updates="None" name="Window size (pixels)"/>
+    <Param val="" valType="str" updates="None" name="Use version"/>
+    <Param val="[1707, 1920]" valType="list" updates="None" name="Window size (pixels)"/>
     <Param val="avg" valType="str" updates="None" name="blendMode"/>
     <Param val="$[0,0,0]" valType="color" updates="None" name="color"/>
     <Param val="rgb" valType="str" updates="None" name="colorSpace"/>
@@ -77,7 +77,7 @@
         <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
-        <Param val="############################&amp;#10;# Eyelink recording stops&amp;#10;############################&amp;#10;&amp;#10;if (not dummy_mode):&amp;#10;    # clear the screen&amp;#10;    clear_screen(win, genv)&amp;#10;&amp;#10;    # send a message to clear the Data Viewer screen as well&amp;#10;    el_tracker.sendMessage('!V CLEAR %d %d %d' % bgcolor_RGB)&amp;#10;&amp;#10;    # close the VCL file that contain the VFRAME messages&amp;#10;    # dlf_file.close()&amp;#10;&amp;#10;    # stop recording; add 100 msec to catch final events before stopping&amp;#10;    pylink.pumpDelay(100)&amp;#10;    el_tracker.stopRecording()" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="############################&amp;#10;# Eyelink recording stops&amp;#10;############################&amp;#10;&amp;#10;if (not dummy_mode):&amp;#10;    el_tracker.sendMessage('trial_ends')&amp;#10;    # save data to the eye tracking file&amp;#10;&amp;#10;    # record trial variables to the EDF data file, for details, see Data&amp;#10;    # Viewer User Manual, &quot;Protocol for EyeLink Data to Viewer Integration&quot;&amp;#10;    # as an example, the following line will create a variable of phase and assign 'test' as its value&amp;#10;    el_tracker.sendMessage('!V TRIAL_VAR phase %s' % 'test')&amp;#10;    # another example, the following line will create a variable of trialNum and assign trialLoop.thisN + 1 as its value&amp;#10;    el_tracker.sendMessage('!V TRIAL_VAR trialNum %s' % (trialLoop.thisN + 1))&amp;#10;    &amp;#10;    # clear the screen&amp;#10;    clear_screen(win, genv)&amp;#10;&amp;#10;    # send a message to clear the Data Viewer screen as well&amp;#10;    el_tracker.sendMessage('!V CLEAR %d %d %d' % bgcolor_RGB)&amp;#10;&amp;#10;    # close the VCL file that contain the VFRAME messages&amp;#10;    # dlf_file.close()&amp;#10;&amp;#10;    # stop recording; add 100 msec to catch final events before stopping&amp;#10;    pylink.pumpDelay(100)&amp;#10;    el_tracker.stopRecording()" valType="extendedCode" updates="constant" name="End Routine"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="el_ControlScript" valType="code" updates="None" name="name"/>
       </CodeComponent>
@@ -249,7 +249,6 @@
     </LoopInitiator>
     <Routine name="el_DriftCorrection"/>
     <Routine name="trial"/>
-    <Routine name="el_SaveData"/>
     <LoopTerminator name="trialLoop"/>
     <LoopTerminator name="blockLoop"/>
   </Flow>
