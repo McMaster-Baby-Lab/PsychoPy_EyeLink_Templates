@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2022.2.5),
-    on January 04, 2023, at 16:51
+    on Tue Jan 31 19:46:57 2023
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -71,7 +71,7 @@ filename = _thisDir + os.sep + u'results/%s_%s_%s' % (expInfo['participant'], ex
 # An ExperimentHandler isn't essential but helps with data saving
 thisExp = data.ExperimentHandler(name=expName, version='',
     extraInfo=expInfo, runtimeInfo=None,
-    originPath='C:\\Users\\babylab-eyetracker\\Documents\\Psychopy_examples\\PsychoPy_EyeLink_Templates\\template.py',
+    originPath='/Users/naiqixiao/Documents/PsychoPy/PsychoPy_EyeLink_Templates/template.py',
     savePickle=True, saveWideText=True,
     dataFileName=filename)
 # save a log file for detail verbose info
@@ -114,6 +114,7 @@ defaultKeyboard = keyboard.Keyboard(backend='iohub')
 # Run 'Begin Experiment' code from setupScript
 # --- Show participant info dialog --
 expInfo['participant'] = studyAbbr + '_' + ''.join(random.choices(string.ascii_uppercase + string.ascii_lowercase +  string.digits, k = 4))
+expInfo['frameRate'] = round(expInfo['frameRate'])
 
 # loop until we get a valid filename
 while True:
@@ -487,6 +488,8 @@ for thisBlockLoop in blockLoop:
                 el_tracker.startRecording(1, 1, 1, 1)
                 # send a "TRIALID" message to mark the start of a trial, see Data
                 # Viewer User Manual, "Protocol for EyeLink Data to Viewer Integration"
+                el_tracker.sendMessage('TRIALID %d' % (trialLoop.thisRepN + 1))
+                
                 el_tracker.sendMessage('BLOCK_ID %d, TRIAL_ID %d' % ((blockLoop.thisN + 1), (trialLoop.thisN + 1)))
         
                 # record_status_message : show some info on the Host PC
@@ -610,6 +613,8 @@ for thisBlockLoop in blockLoop:
             # as an example, the following line will create a variable of phase and assign 'test' as its value
             el_tracker.sendMessage('!V TRIAL_VAR phase %s' % 'test')
             # another example, the following line will create a variable of trialNum and assign trialLoop.thisN + 1 as its value
+            # put 10 ms to allow all variables transferred to the eye tracking data
+            core.wait(0.001)
             el_tracker.sendMessage('!V TRIAL_VAR trialNum %s' % (trialLoop.thisN + 1))
             
             # clear the screen
@@ -624,6 +629,10 @@ for thisBlockLoop in blockLoop:
             # stop recording; add 100 msec to catch final events before stopping
             pylink.pumpDelay(100)
             el_tracker.stopRecording()
+            
+            # send a 'TRIAL_RESULT' message to mark the end of trial, see Data
+            # Viewer User Manual, "Protocol for EyeLink Data to Viewer Integration"
+            el_tracker.sendMessage('TRIAL_RESULT %d' % pylink.TRIAL_OK)
         # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
         if routineForceEnded:
             routineTimer.reset()
